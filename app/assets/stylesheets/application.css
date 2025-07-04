@@ -1,0 +1,603 @@
+/* =============================== */
+/* Secciones de Rails Assets       */
+/* =============================== */
+/*
+ *= require_tree .
+ *= require_self
+ */
+/*
+ *= require font-awesome
+ */
+
+/* =============================== */
+/* Estilos Generales del Body      */
+/* =============================== */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  background-color: #d4d4d4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =============================== */
+/* Estilos del Header              */
+/* =============================== */
+header {
+  background-color: #2c3e50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  width: 100%;
+}
+
+/* =============================== */
+/* Estilos de la Navegación (Nav)  */
+/* =============================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-left .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.nav-left .logo img {
+  height: 50px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.nav-right ul {
+  list-style: "★ ";
+  margin: 0;
+  padding: 0;
+  display: flex;
+  color: white;
+}
+
+.nav-right li {
+  margin-left: 30px;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-right a:hover {
+  color: #1ee4c3; /* Ajustado el color de hover para que coincida con el activo */
+}
+
+.nav-right .theme-toggle {
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.nav-right ul li.active-nav-item {
+  list-style-type: none;
+}
+
+.nav-right ul li.active-nav-item a {
+  color: #1ee4c3;
+  font-weight: bold;
+}
+
+/* =============================== */
+/* Estilos del Contenido Principal (Main) */
+/* =============================== */
+main {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0 20px 20px 20px;
+  background-color: transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #29253f;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* =============================== */
+/* Estilos de la Sección Hero      */
+/* =============================== */
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: 0px;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/impresora3d.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px) brightness(0.5);
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0px 0px 0.5px #ffffff;
+}
+
+.hero-text p {
+  font-size: 1.3em;
+  color: white;
+  text-shadow: 0px 0px 0.5px #ffffff;
+}
+
+/* =============================== */
+/* Estilos del Título "Trabajos Realizados" */
+/* =============================== */
+.works-heading {
+    background-color: transparent;
+    font-size: 2em;
+    color: #000000;
+    text-align: left;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+/* =============================== */
+/* Estilos del Carrusel y Galería de Imágenes */
+/* =============================== */
+.carousel-container {
+    position: relative;
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+    padding-bottom: 10px;
+    margin-top: 0;
+    justify-content: flex-start;
+}
+
+.gallery-container img {
+    flex-shrink: 0;
+    width: 380px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las Flechas de Navegación del Carrusel */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 10;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Media Queries para Responsividad del Carrusel */
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 95%;
+        padding: 10px;
+        margin-top: 15px;
+    }
+    .gallery-container img {
+        width: 250px;
+        height: 180px;
+    }
+    .carousel-button {
+        padding: 8px 12px;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        padding: 5px;
+        margin-top: 10px;
+    }
+    .gallery-container img {
+        width: 90vw;
+        height: auto;
+        max-height: 200px;
+    }
+    .carousel-button {
+        padding: 5px 10px;
+        font-size: 1em;
+    }
+}
+
+/* =============================== */
+/* Estilos de la Sección de Contacto (Tema Oscuro) */
+/* =============================== */
+.contact-section {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.contact-image {
+    flex: 0.8;
+    overflow: hidden;
+}
+
+.contact-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-content {
+    flex: 0.8;
+    padding: 50px;
+    text-align: left;
+}
+
+.contact-content h3 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.contact-content h2 {
+    color: white;
+    font-size: 2.8em;
+    margin-bottom: 25px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.contact-content p {
+    line-height: 1.7;
+    margin-bottom: 35px;
+    font-size: 1.1em;
+    color: #e0e0e0;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: white;
+    color: #2c3e50;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #f0f0f0;
+    color: #2c3e50;
+}
+
+/* Media Query para Responsividad de la Sección de Contacto */
+@media (max-width: 992px) {
+    .contact-section {
+        flex-direction: column;
+        width: 95%;
+        margin: 40px auto;
+    }
+
+    .contact-image {
+        width: 100%;
+        height: 300px;
+    }
+
+    .contact-content {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .contact-content h3 {
+        font-size: 1.3em;
+    }
+
+    .contact-content h2 {
+        font-size: 2.2em;
+    }
+
+    .contact-content p {
+        font-size: 1em;
+    }
+
+    .contact-button {
+        width: auto;
+        padding: 12px 25px;
+        font-size: 1em;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-content {
+        padding: 20px;
+    }
+    .contact-content h2 {
+        font-size: 1.8em;
+    }
+    .contact-content p {
+        font-size: 0.9em;
+    }
+    .contact-image {
+        height: 250px;
+    }
+}
+
+/* =============================== */
+/* Estilos del Footer Principal Simple */
+/* =============================== */
+.main-footer-simple {
+    background-color: #2c3e50;
+    color: #aaa;
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 0.8em;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+
+.main-footer-simple .footer-content-simple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-footer-simple .contact-icons {
+    margin-bottom: 10px;
+}
+
+.main-footer-simple .contact-icons a {
+    color: #fff;
+    font-size: 2em;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.main-footer-simple .contact-icons a:hover {
+    color: #00bcd4;
+}
+
+.main-footer-simple .copyright {
+    padding-top: 10px;
+    border-top: 1px solid #444;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Media Queries para Responsividad del Footer */
+@media (max-width: 480px) {
+    .main-footer-simple .contact-icons a {
+        margin: 0 10px;
+        font-size: 1.8em;
+    }
+}
+
+/* =============================== */
+/* Estilos del Footer */
+/* =============================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  margin-top: 50px;
+}
+
+footer a {
+  color: #000000;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =============================== */
+/* Estilos de la Sección de Productos */
+/* =============================== */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Estilos para cada item de producto */
+.product-item {
+  flex: 0 1 calc(33.333% - 20px);
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 280px;
+  max-width: 350px;
+}
+
+/* Estilos para las imágenes dentro de cada item de producto */
+.product-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.product-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #29253f;
+}
+
+.product-item p {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.product-item .btn {
+  display: inline-block;
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+}
+
+.product-item .btn:hover {
+  background-color: #1ee4c3;
+}
+
+/* Media Queries para Responsividad de Productos */
+@media (max-width: 992px) {
+  .product-item {
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .product-item {
+    flex: 0 1 calc(100% - 20px);
+  }
+  .product-item img {
+    height: 200px;
+  }
+}
+
+/* =============================== */
+/* Iconos de Contacto  */
+/* =============================== */
+.social-icons-contact a {
+  color: black;
+  font-size: 2.0em;
+  margin: 0 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.social-icons-contact a .fa-whatsapp:hover {
+  color: #25d366;
+}
+.social-icons-contact a .fa-facebook-f:hover {
+  color: #3b5998;
+}
+
+.social-icons-contact a .fa-instagram:hover {
+  color: #c32aa3;
+} 

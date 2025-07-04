@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Impresiones 3d "Tu imaginacion es el limite"</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= javascript_importmap_tags %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <%= link_to root_path, class: "logo" do %>
+          <%= image_tag "logo_negro.png", alt: "Logo Impresiones 3D" %>
+        <% end %>
+      </div>
+     <div class="nav-right">
+  <ul>
+    <li class="<%= 'active-nav-item' if current_page?(root_path) %>">
+      <%= link_to "Inicio", root_path %>
+    </li>
+    <li class="<%= 'active-nav-item' if current_page?(productos_path) %>">
+      <%= link_to "Productos", productos_path %>
+    </li>
+    <li class="<%= 'active-nav-item' if current_page?(contacto_path) %>"> 
+      <%= link_to "Contacto", contacto_path %> 
+    </li>
+    </li>
+  </ul>
+</div>
+    </nav>
+  </header>
+
+  
+
+  <main>
+    <%= yield %>
+  </main>
+
+  <footer class="main-footer-simple">
+    <div class="footer-content-simple">
+      <div class="contact-icons">
+        <a href="#" target="_blank" title="Contáctanos por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" target="_blank" title="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" title="Síguenos en Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+      <div class="copyright">
+        <p>&copy; <%= Time.now.year %> Derechos a Benja Rivas Prime.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

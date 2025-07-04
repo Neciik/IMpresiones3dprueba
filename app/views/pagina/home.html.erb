@@ -1,0 +1,37 @@
+<section class="hero">
+    <div class="hero-background"></div>
+    <div class="hero-text">
+      <h1>¡Dale vida a tus ideas con nuestras piezas 3D personalizadas!</h1>
+      <p>Desde llaveros únicos hasta figuras personalizadas, creamos lo que imaginás.</p>
+    </div>
+  </section>
+
+<div class="works-heading">
+  <h2>¡Trabajos realizados!</h2>
+</div>
+
+<div class="carousel-container">
+  <button class="carousel-button prev">&lt;</button>
+  <div class="gallery-wrapper">
+    <div class="gallery-container">
+      <%= image_tag "descarga.jpeg", alt: "Descripción del trabajo 1" %>
+      <%= image_tag "Rocket.jpg", alt: "Descripción del trabajo 2" %>
+      <%= image_tag "images.jpeg", alt: "Descripción del trabajo 3" %>
+      <%= image_tag "1.jpg", alt: "Descripción del trabajo 1" %>
+      <%= image_tag "1222.jpeg", alt: "Descripción del trabajo 1" %>
+    </div>
+  </div>
+  <button class="carousel-button next">&gt;</button>
+</div>
+
+<div class="contact-section">
+  <div class="contact-image">
+    <%= image_tag "impresorah3.jpeg", alt: "impresorah3" %>
+  </div>
+  <div class="contact-content">
+    <h3>¡Estamos aqui para divertirnos!</h3>
+    <h2>Contacta con nosotros</h2>
+    <p>"¡Tu proyecto 3D, sin misterios! Si te surge alguna pregunta sobre la impresión 3D, necesitás un presupuesto o simplemente querés consultar algo, estamos a un mensaje de distancia. Nuestro equipo está comprometido a resolver cada una de tus dudas y darte el mejor asesoramiento. ¡No te quedes con la intriga, escribinos!"</p>
+    <a <%= link_to "Contáctanos", contacto_path, class: "contact-button" %></a>
+  </div>
+</div>
